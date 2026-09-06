@@ -1,4 +1,4 @@
-# SEBI Sentinel
+# SEBI Compliance Manager Full Stack App
 
 Execute the SEBI_COMPLIANCE_APP_SYSTEM_PROMPT.md to create a full stack multi-agent app for Managing SEBI Compliance Filing Requirements for Public Companies in India, other information / inputs are attached in this chat itself.
 
