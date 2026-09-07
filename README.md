@@ -19,36 +19,29 @@ Neighbour repo: [SEBI-Compliance-Research](https://github.com/d33pm3/SEBI-Compli
 **This is not** [SEBI-Compliance-Research](https://github.com/d33pm3/SEBI-Compliance-Research) (that repo researches live obligations into a 12-column workbook).
 **This is not** a full-stack multi-agent platform or a live LLM pipeline.
 **This is not** a filing, calendar submission, or compliance opinion.
-**This is not** a complete `src/` tree on `main` — the runnable source is in `Codebase.zip`.
+**This is** a self-contained repository with runnable source tracked under `src/` and `public/`.
 
-## Where the source is
+## Synthetic demo data
 
-The **complete application source** is in [`Codebase.zip`](Codebase.zip), under:
-
-- `1_SEBI Full Stack App/src/`
-- `1_SEBI Full Stack App/public/`
-
-There is no runnable `src/` on `main`. Extract the zip before `npm run dev`.
+All company, user, filing, notice, document, system-health, and operational records in this repository are fictional synthetic demo fixtures. They must not be treated as real customer, company, regulatory, or operational information.
 
 ## Run the eval build
 
-Requires Node.js 18+ and npm.
+Requires Bun 1.2.23.
 
 ```bash
 git clone https://github.com/d33pm3/Multi-agent-Full-Stack-App.git
 cd Multi-agent-Full-Stack-App
-unzip -o Codebase.zip
-cp -a "1_SEBI Full Stack App/src/." src/
-cp -a "1_SEBI Full Stack App/public/." public/
-npm i
-npm run dev
+bun install --frozen-lockfile
+bun run dev
 ```
 
-After extract, `src/main.tsx` must exist. If it does not, the zip did not unpack.
+Validate the same baseline used by CI:
 
 ```bash
-npm test
-npm run build
+bun run lint
+bun run test
+bun run build
 ```
 
 ## What is not deployed
